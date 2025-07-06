@@ -1,50 +1,179 @@
-# Welcome to your Expo app 👋
+# 🗣️ Assistive Speech Recognition System
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This mobile application is designed to support individuals with **cerebral palsy** by enabling seamless **real-time speech-to-text communication** with caregivers. The app facilitates both in-home and remote interaction, allowing users to express their needs more independently.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- 🎤 **Speech Recognition** – Real-time voice-to-text conversion using OpenAI Whisper
+- 🗣️ **Text-to-Speech** – Caregivers can respond using synthesized voice replies
+- 🔐 **Role-Based Access** – Separate login flows for Patients (CP Users) and Caregivers
+- 🔄 **Two-Way Communication** – Supports message exchange even when the caregiver is remote
+- ☁️ **Cloud Sync** – Stores chat logs and user profiles securely in Firebase
+- 👓 **Accessible UI** – Clean, simple interface designed for accessibility and ease of use
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 🛠️ Tech Stack
 
-In the output, you'll find options to open the app in a
+| Layer        | Technology         |
+|--------------|--------------------|
+| Frontend     | React Native       |
+| Backend      | FastAPI (optional for Whisper deployment) |
+| Speech-to-Text | OpenAI Whisper (local/remote model) |
+| Text-to-Speech | Google Text-to-Speech (gTTS) |
+| Authentication | Firebase Auth     |
+| Database     | Firebase Firestore |
+| Storage      | Firebase Storage (for audio files if needed) |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📱 App Structure
 
-## Get a fresh project
+- `Login Page` – Sign up or login based on role
+- `Role Selection` – Choose between CP User and Caregiver
+- `Home Pages` – Role-specific dashboards
+- `Profile & Settings` – Update profile and preferences
+- `Real-Time Chat` – Transcribed speech is sent to caregiver with timestamp
+- `Help & Support` – FAQs and accessibility instructions
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🧑‍💻 How to Run Locally
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. Clone the repo:
 
-## Learn more
+git clone https://github.com/dilsha6/vaagmaya.git
+cd vaagmaya
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. Install dependencies:
 
-## Join the community
+npm install
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+3. Set up Firebase:
+- Enable Firebase Authentication and Firestore
+- Add your `google-services.json` or `GoogleService-Info.plist`
+
+4. Run the app:
+
+npx react-native run-android
+or
+
+npx react-native run-ios
+
+
+---
+
+## 💡 Future Improvements
+
+- AI-based error correction in transcription
+- Offline Whisper model integration
+- Real-time emotion tagging (tone/sentiment analysis)
+- Multilingual support
+- Emergency alert trigger
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋‍♀️ Developed By
+
+**Dilsha K** – Final year B.Tech IT student passionate about building accessible healthcare solutions.
+
+[GitHub](https://github.com/dilsha6) | [LinkedIn](# 🗣️ Assistive Speech Recognition System
+
+This mobile application is designed to support individuals with **cerebral palsy** by enabling seamless **real-time speech-to-text communication** with caregivers. The app facilitates both in-home and remote interaction, allowing users to express their needs more independently.
+
+---
+
+## 🚀 Features
+
+- 🎤 **Speech Recognition** – Real-time voice-to-text conversion using OpenAI Whisper
+- 🗣️ **Text-to-Speech** – Caregivers can respond using synthesized voice replies
+- 🔐 **Role-Based Access** – Separate login flows for Patients (CP Users) and Caregivers
+- 🔄 **Two-Way Communication** – Supports message exchange even when the caregiver is remote
+- ☁️ **Cloud Sync** – Stores chat logs and user profiles securely in Firebase
+- 👓 **Accessible UI** – Clean, simple interface designed for accessibility and ease of use
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer        | Technology         |
+|--------------|--------------------|
+| Frontend     | React Native       |
+| Backend      | FastAPI (optional for Whisper deployment) |
+| Speech-to-Text | OpenAI Whisper (local/remote model) |
+| Text-to-Speech | Google Text-to-Speech (gTTS) |
+| Authentication | Firebase Auth     |
+| Database     | Firebase Firestore |
+| Storage      | Firebase Storage (for audio files if needed) |
+
+---
+
+## 📱 App Structure
+
+- `Login Page` – Sign up or login based on role
+- `Role Selection` – Choose between CP User and Caregiver
+- `Home Pages` – Role-specific dashboards
+- `Profile & Settings` – Update profile and preferences
+- `Real-Time Chat` – Transcribed speech is sent to caregiver with timestamp
+- `Help & Support` – FAQs and accessibility instructions
+
+---
+
+## 🧑‍💻 How to Run Locally
+
+1. Clone the repo:
+
+git clone https://github.com/dilsha6/vaagmaya.git
+cd vaagmaya
+
+
+2. Install dependencies:
+
+npm install
+
+
+3. Set up Firebase:
+- Enable Firebase Authentication and Firestore
+- Add your `google-services.json` or `GoogleService-Info.plist`
+
+4. Run the app:
+
+npx react-native run-android
+or
+
+npx react-native run-ios
+
+
+---
+
+## 💡 Future Improvements
+
+- AI-based error correction in transcription
+- Offline Whisper model integration
+- Real-time emotion tagging (tone/sentiment analysis)
+- Multilingual support
+- Emergency alert trigger
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋‍♀️ Developed By
+
+**Dilsha K** – Final year B.Tech IT student passionate about building accessible healthcare solutions.
+
+[GitHub](https://github.com/dilsha6) | [LinkedIn](https://www.linkedin.com/in/dilsha-k-a6100622b))
